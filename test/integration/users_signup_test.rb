@@ -28,5 +28,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # 対応するコントローラ内で明示されたリダイレクトの挙動である事
     follow_redirect!
     assert_template 'users/show'
+    assert_not flash.(flash[:success])
   end
 end
